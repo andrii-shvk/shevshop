@@ -1,0 +1,1 @@
+export { MensClothingAsyncPage as MensClothingPage } from "./ui/MensClothingPage.async";
