@@ -1,5 +1,4 @@
 @import "./reset.scss";
-
-.container {
-    
-}
+@import "./variables/global.scss";
+@import "./themes/light.scss";
+@import "./themes/dark.scss";

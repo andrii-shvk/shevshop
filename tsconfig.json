@@ -5,18 +5,10 @@
         { "path": "./tsconfig.node.json" }
     ],
     "compilerOptions": {
-        "types": ["node"],
-        // "baseUrl": ".",
-        // "paths": {
-        //     "@/*": ["src/*"]
-        // }
-        //   "baseUrl": ".",
-        //   "paths": {
-        //       "@/*": ["src/*"]
-        // },
+        "types": ["node", "vite-plugin-svgr/client"],
         "baseUrl": "../",
         "paths": {
             "@/*": ["./*"]
-        }
+        },
     }
 }

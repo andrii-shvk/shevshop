@@ -1,4 +1,5 @@
-.header {
-    color: red;
-    font-size: 32px;
+.container {
+    margin: 0 auto;
+    max-width: var(--container-body);
+    padding: 0 36px;
 }

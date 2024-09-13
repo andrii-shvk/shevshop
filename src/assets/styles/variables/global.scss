@@ -1,3 +1,31 @@
 :root {
-    --container-body: 1050px;
+    --font-family-header: "Arial", sans-serif;
+    --font-family-main: "Roboto", sans-serif;
+
+    // text sizes
+
+    // small size
+    --font-size-s: 16px;
+    --font-line-s: 22px;
+    --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+
+    // medium size
+    --font-size-m: 18px;
+    --font-line-m: 24px;
+    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+
+    // large size
+    --font-size-l: 40px;
+    --font-line-l: 48px;
+    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+    // header
+    --content-header-height: 150px;
+    --content-footer-height: 460px;
+
+    // icon-svg
+    --light-svg: #bbc4d0;
+
+    // container
+    --container-body: 1300px;
 }

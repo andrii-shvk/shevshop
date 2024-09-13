@@ -1,5 +1,43 @@
 .header {
-    color: green;
-    font-size: 24px;
-    font-weight: bold;
+    background-color: var(--bg-color);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: var(--container-body);
+    padding: 0 36px;
+}
+
+.content {
+    height: var(--content-header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoTitle {
+    font-size: var(--font-size-l);
+
+    color: var(--primary-color);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.headerIcon {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 28px;
+    height: 28px
+}
+
+.hiddenIcon {
+    @media (min-width: 1250px) {
+        display: none;
+    }
 }
