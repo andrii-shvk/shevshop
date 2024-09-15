@@ -41,3 +41,16 @@
         display: none;
     }
 }
+
+.routerNav {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--container-content);
+    margin: 0 auto;
+}
+
+.routeLink {
+    font-size: var(--font-size-s);
+    color: var(--primary-color);
+    font-weight: 600;
+}

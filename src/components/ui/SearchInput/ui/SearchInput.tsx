@@ -1,5 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import cls from "./SearchInput.module.scss";
+import { Icon } from "../../Icon";
+import { ReactComponent as Search } from "@/assets/icons/search.svg";
 
 interface SearchInputProps {
     onSearch: (query: string) => void;
@@ -18,13 +20,16 @@ const SearchInput = ({
     };
 
     return (
-        <input
-            type="search"
-            value={queryString}
-            onChange={handleInputChange}
-            placeholder={placeholder}
-            className={cls.searchInput}
-        />
+        <div className={cls.searchInput}>
+            <input
+                type="search"
+                value={queryString}
+                onChange={handleInputChange}
+                placeholder={placeholder}
+                className={cls.Input}
+            />
+            <Icon Svg={Search} className={cls.Icon} clickable />
+        </div>
     );
 };
 

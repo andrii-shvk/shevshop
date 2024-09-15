@@ -4,25 +4,30 @@ import clsx from "clsx";
 import { Link } from "react-router-dom";
 import { SearchInput } from "@/components/ui/SearchInput";
 import { Icon } from "@/components/ui/Icon";
+import { routerNavigations } from "@/const/router";
+import { LangSwitcher } from "@/components/ui/LangSwitcher";
+import { useTranslation } from "react-i18next";
 
 interface HeaderProps {}
 
 const Header = (props: HeaderProps) => {
     const {} = props;
+    const { t } = useTranslation();
 
     const handleSearch = (query: string) => {
         console.log(query)
     }
-
+ 
     return (
         <header className={cls.header}>
             <div className={cls.container}>
                 <div className={cls.content}>
 
                     <Link to={'/'} className={cls.logoTitle}>SHEVSHOP</Link>
+
                     <SearchInput
                         onSearch={handleSearch} 
-                        placeholder="Search for brands, items..."
+                        placeholder={t("SearchInput")}
                     />
 
                     <div className={cls.icons}>
@@ -32,11 +37,18 @@ const Header = (props: HeaderProps) => {
                                     cls.headerIcon,
                                     (name === "Search" || name === "Home") ? cls.hiddenIcon : "")}>
                                 <Icon Svg={SvgIcon} clickable />
-                                <p className={cls.hiddenIcon}>{name}</p>
+                                <p className={cls.hiddenIcon}>{t(name)}</p>
                             </div>
                         ))}
-                        <p>EN</p>
+                        <LangSwitcher />
                     </div>
+                </div>
+                <div className={cls.routerNav}>
+                    {routerNavigations.map(({path, title}) => (
+                        <Link key={path} to={path} className={cls.routeLink}>
+                            {t(`${title}`)}
+                        </Link>
+                    ))}
                 </div>
             </div>
         </header>

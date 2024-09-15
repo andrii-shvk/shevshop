@@ -4,6 +4,8 @@ import "@/assets/styles/index.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainLayout } from "./layouts/MainLayout";
 import { routerNavigations } from "./const/router";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n/i18n";
 
 const router = createBrowserRouter([
     {
@@ -19,5 +21,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")!).render(
-    <RouterProvider router={router} />
+    <I18nextProvider i18n={i18n}>
+        <RouterProvider router={router} />
+    </I18nextProvider>
 );

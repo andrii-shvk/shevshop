@@ -1,4 +1,8 @@
 .searchInput {
+    position: relative;
+}
+
+.Input {
     display: flex;
     background-color: #f4f6f9;
     width: 620px;
@@ -6,4 +10,12 @@
     border-radius: 2px;   
     font-size: var(--font-size-m);
     padding: 0 58px 0 36px;
+}
+
+.Icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 22px;
 }
