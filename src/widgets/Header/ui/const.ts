@@ -1,8 +1,8 @@
-import { ReactComponent as Home } from "@/assets/icons/home.svg";
-import { ReactComponent as Account } from "@/assets/icons/account.svg";
-import { ReactComponent as Wishlist } from "@/assets/icons/wishlist.svg";
-import { ReactComponent as MyBag } from "@/assets/icons/mybag.svg";
-import { ReactComponent as Search } from "@/assets/icons/search.svg";
+import { ReactComponent as Home } from "@/assets/icons/HeaderIcons/home.svg";
+import { ReactComponent as Account } from "@/assets/icons/HeaderIcons/account.svg";
+import { ReactComponent as Wishlist } from "@/assets/icons/HeaderIcons/wishlist.svg";
+import { ReactComponent as MyBag } from "@/assets/icons/HeaderIcons/mybag.svg";
+import { ReactComponent as Search } from "@/assets/icons/HeaderIcons/search.svg";
 
 interface IconsType {
     name: string;

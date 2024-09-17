@@ -7,11 +7,10 @@ import { Icon } from "@/components/ui/Icon";
 import { routerNavigations } from "@/const/router";
 import { LangSwitcher } from "@/components/ui/LangSwitcher";
 import { useTranslation } from "react-i18next";
+import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
 
-interface HeaderProps {}
 
-const Header = (props: HeaderProps) => {
-    const {} = props;
+const Header = () => {
     const { t } = useTranslation();
 
     const handleSearch = (query: string) => {
@@ -41,6 +40,7 @@ const Header = (props: HeaderProps) => {
                             </div>
                         ))}
                         <LangSwitcher />
+                        <ThemeSwitcher />
                     </div>
                 </div>
                 <div className={cls.routerNav}>

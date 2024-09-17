@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import cls from "./SearchInput.module.scss";
 import { Icon } from "../../Icon";
-import { ReactComponent as Search } from "@/assets/icons/search.svg";
+import { ReactComponent as Search } from "@/assets/icons/HeaderIcons/search.svg";
 
 interface SearchInputProps {
     onSearch: (query: string) => void;
