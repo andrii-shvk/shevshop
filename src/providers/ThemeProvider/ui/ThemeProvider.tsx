@@ -21,8 +21,6 @@ const ThemeProvider: FC<ThemeProviderProps> = (props) => {
         theme: theme,
         setTheme: setTheme,
     };
-    // document.body.className = theme;
-    // document.getElementById("app")?.classList.add(theme);
 
     return (
         <ThemeContext.Provider value={defaultProps}>

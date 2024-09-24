@@ -1,5 +1,5 @@
 .header {
-    background-color: var(--bg-color);
+    background-color: var(--light-bg);
 }
 
 .container {
@@ -16,24 +16,27 @@
 }
 
 .logoTitle {
-    font-size: var(--font-size-l);
-
+    font-size: var(--font-size-xl);
     color: var(--primary-color);
 }
 
 .icons {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 40px;
+}
+
+.Icon * {
+    color: var(--primary-color);
 }
 
 .headerIcon {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 3px;
     width: 28px;
-    height: 28px
+    height: 28px;
 }
 
 .hiddenIcon {
@@ -42,11 +45,17 @@
     }
 }
 
+.iconTitle {
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
 .routerNav {
     display: flex;
     justify-content: space-between;
     max-width: var(--container-content);
     margin: 0 auto;
+    padding-bottom: 30px;
 }
 
 .routeLink {

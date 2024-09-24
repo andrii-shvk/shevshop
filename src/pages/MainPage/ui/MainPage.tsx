@@ -1,5 +1,11 @@
+import { CarouselBanner } from "@/widgets/CarouselBanner";
+
 const MainPage = () => {
-    return <div>MainPage</div>;
+    return (
+        <>
+            <CarouselBanner />
+        </>
+    );
 };
 
 export default MainPage;

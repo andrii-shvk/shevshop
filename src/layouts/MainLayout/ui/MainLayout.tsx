@@ -9,7 +9,7 @@ const MainLayout = () => {
     return (
         <div id="app" className={`app ${theme}`}>
             <Header />
-                <main className={cls.container}>
+            <main className={cls.main}>
                 <Outlet />
             </main>
         </div>

@@ -1,0 +1,61 @@
+.CarouselBanner {
+    background-color: #b0c2c1;
+    height: 520px;
+
+    &:hover {
+        .arrows {
+            opacity: 1;
+        }
+    }
+}
+.arrows {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.bannerCard {
+    display: flex;
+    padding-top: 55px;
+    gap: 52px;
+}
+
+.img {
+    width: 618px;
+    height: 550px;
+    border-radius: 8px;
+}
+
+.bannerInfo {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    width: 50%;
+    gap: 34px;
+}
+
+.title {
+    color: var(--primary-color);
+    font: var(--font-xl);
+}
+
+.description {
+    font: var(--font-l);
+}
+
+.infoBg {
+    padding: 5px 10px 5px 10px;
+    background-color: #00000099;
+    width: 370px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.info {
+    font: var(--font-s);
+    color: #fff;
+}
+
+.btn {
+    width: 182px;
+    height: 56px;
+}

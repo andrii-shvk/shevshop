@@ -10,9 +10,9 @@ const ThemeSwitcher = () => {
     return (
         <button onClick={toggleTheme} className={cls.ThemeSwitcher}>
             {theme === Theme.DARK ? (
-                <Icon Svg={MoonIcon} />
+                <Icon Svg={MoonIcon} className={cls.IconTheme} />
             ) : (
-                <Icon Svg={SunIcon} />
+                <Icon Svg={SunIcon} className={cls.IconTheme} />
             )}
         </button>
     );

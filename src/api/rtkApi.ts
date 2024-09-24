@@ -1,0 +1,25 @@
+import { IProduct } from "@/models";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+
+export const rtkApi = createApi({
+    reducerPath: "goodsApi",
+    baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000" }),
+    tagTypes: ["Goods"],
+    endpoints: (builder) => ({
+        getAllClothing: builder.query<IProduct[], number>({
+            query: () => ({
+                url: `/clothing`,
+            }),
+            providesTags: () => ["Goods"],
+        }),
+        getAllJewelery: builder.query<IProduct[], number>({
+            query: () => ({
+                url: `/jewelery`,
+            }),
+            providesTags: () => ["Goods"],
+        }),
+    }),
+});
+
+export const { useGetAllClothingQuery } = rtkApi;
+export const { useGetAllJeweleryQuery } = rtkApi;

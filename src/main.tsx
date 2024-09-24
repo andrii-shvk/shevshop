@@ -7,6 +7,8 @@ import { routerNavigations } from "./const/router";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n/i18n";
 import { ThemeProvider } from "./providers/ThemeProvider";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 const router = createBrowserRouter([
     {
@@ -22,9 +24,11 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")!).render(
-    <ThemeProvider >
+    <Provider store={store}>
+    <ThemeProvider>
         <I18nextProvider i18n={i18n}>
             <RouterProvider router={router} />
         </I18nextProvider>
     </ThemeProvider>
+    </Provider>
 );

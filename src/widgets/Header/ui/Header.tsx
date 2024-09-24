@@ -35,8 +35,8 @@ const Header = () => {
                                 className={clsx(
                                     cls.headerIcon,
                                     (name === "Search" || name === "Home") ? cls.hiddenIcon : "")}>
-                                <Icon Svg={SvgIcon} clickable />
-                                <p className={cls.hiddenIcon}>{t(name)}</p>
+                                <Icon Svg={SvgIcon} clickable className={cls.Icon}  />
+                                <p className={cls.iconTitle}>{t(name)}</p>
                             </div>
                         ))}
                         <LangSwitcher />

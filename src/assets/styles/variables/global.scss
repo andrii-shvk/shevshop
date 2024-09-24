@@ -4,6 +4,11 @@
 
     // text sizes
 
+    // x-small size
+    --font-size-xs: 14px;
+    --font-line-xs: 18px;
+    --font-xs: var(--font-size-xs) / var(--font-line-xs) var(--font-family-main);
+
     // small size
     --font-size-s: 16px;
     --font-line-s: 22px;
@@ -15,9 +20,19 @@
     --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
 
     // large size
-    --font-size-l: 40px;
-    --font-line-l: 48px;
+    --font-size-l: 24px;
+    --font-line-l: 30px;
     --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+    // x-large size
+    --font-size-xl: 40px;
+    --font-line-xl: 48px;
+    --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+
+    // xx-large size
+    --font-size-xxl: 70px;
+    --font-line-xxl: 78px;
+    --font-xxl: var(--font-size-xxl) / var(--font-line-xxl) var(--font-family-main);
 
     // header
     --content-header-height: 150px;
