@@ -1,0 +1,52 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 500px;
+    background-color: #fff;
+}
+
+.wishlistIcon {
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    cursor: pointer;
+    stroke: #1c1d25;
+    fill: transparent;
+    &:hover {
+        fill: #1c1d25;
+    }
+}
+
+.wishIconActive {
+    fill: #1c1d25;
+}
+
+.img {
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 12px 33px 12px;
+}
+.header {
+    color: var(--light-transparent);
+}
+.brand {
+    font: var(--font-m);
+    margin-top: 3px;
+    font-weight: 500;
+}
+.name {
+    color: var(--light-transparent);
+    font-size: 16px;
+    margin-top: 5px;
+}
+.price {
+    color: var(--price-red);
+    font: var(--font-m);
+    margin-top: 18px;
+}

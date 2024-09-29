@@ -32,3 +32,23 @@
 .swiper-button-next {
     display: none;
 }
+
+.swiper-pagination-bullet {
+  background-color: #ccc;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  outline: none;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #333;
+  width: 60px;
+  height: 10px;
+  transition: width 0.5s ease;
+  border-radius: 6px;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 5px;
+}

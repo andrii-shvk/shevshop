@@ -1,6 +1,8 @@
 .CarouselBanner {
     background-color: #b0c2c1;
     height: 520px;
+    padding-top: 55px;
+    margin-bottom: 280px;
 
     &:hover {
         .arrows {
@@ -15,21 +17,28 @@
 
 .bannerCard {
     display: flex;
-    padding-top: 55px;
+    justify-content: center;
+    align-items: center;
     gap: 52px;
 }
 
+.imgCard {
+    height: 580px;
+    width: 580px;
+    padding: 0 35px 0 0;
+}
+
 .img {
-    width: 618px;
-    height: 550px;
     border-radius: 8px;
+    object-fit: contain;
 }
 
 .bannerInfo {
     display: flex;
     flex-direction: column;
     padding-top: 20px;
-    width: 50%;
+    padding-bottom: 50px;
+    width: 550px;
     gap: 34px;
 }
 
@@ -57,5 +66,14 @@
 
 .btn {
     width: 182px;
-    height: 56px;
+}
+
+.bannerBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.salesBtn {
+    font: var(--font-m);
+    margin: 40px 0 34px 0;
 }

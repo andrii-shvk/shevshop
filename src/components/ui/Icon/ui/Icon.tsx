@@ -3,6 +3,7 @@ interface IconProps {
     clickable?: boolean;
     onClick?: () => void;
     className?: string;
+    isActive?: boolean;
 }
 
 const Icon = ({

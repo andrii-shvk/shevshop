@@ -1,4 +1,4 @@
-import { useGetAllClothingQuery } from "@/api/rtkApi";
+import { useGetAllClothingQuery, useGetBannerGoodsQuery } from "@/api/rtkApi";
 import cls from "./CarouselBanner.module.scss";
 import { Button } from "@/components/ui/Button";
 import { ThemeEnum } from "@/const/general";
@@ -18,11 +18,13 @@ import { ReactComponent as NextIcon } from "@/assets/icons/Arrows/arrow-next.svg
 import { ReactComponent as PrevIcon } from "@/assets/icons/Arrows/arrow-prev.svg";
 import { useRef } from "react";
 import SwiperCore from "swiper";
+import { useTranslation } from "react-i18next";
 
 SwiperCore.use([Navigation, Pagination]);
 
 const CarouselBanner = () => {
-    const { data: clothing, isLoading, error } = useGetAllClothingQuery(1);
+    const { data: bannerGoods, isLoading, error } = useGetBannerGoodsQuery(1);
+    const { t } = useTranslation();
 
     const swiperRef = useRef<SwiperCore>();
 
@@ -39,62 +41,60 @@ const CarouselBanner = () => {
 
     return (
         <section className={cls.CarouselBanner}>
-            <div className="container">
-                <Swiper
-                    modules={[
-                        Autoplay,
-                        EffectFade,
-                        Navigation,
-                        Pagination,
-                        A11y,
-                    ]}
-                    autoplay={{ delay: 4000 }}
-                    speed={1200}
-                    slidesPerView={1}
-                    navigation
-                    pagination={{ clickable: true }}
-                    onSwiper={(swiper) => {
-                        swiperRef.current = swiper;
-                    }}
-                >
-                    {clothing?.map((item, idx) => (
-                        <SwiperSlide key={idx}>
-                            <div className={cls.bannerCard}>
+            <Swiper
+                modules={[Autoplay, EffectFade, Navigation, Pagination, A11y]}
+                autoplay={{ delay: 8000 }}
+                speed={1200}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true, type: "bullets" }}
+                onSwiper={(swiper) => {
+                    swiperRef.current = swiper;
+                }}
+            >
+                {bannerGoods?.map((item, idx) => (
+                    <SwiperSlide key={idx}>
+                        <div className={cls.bannerCard}>
+                            <div className={cls.imgCard}>
                                 <img
                                     src={item.image}
                                     alt={item.title}
                                     className={cls.img}
                                 />
-                                <div className={cls.bannerInfo}>
-                                    <h1 className={cls.title}>{item.title}</h1>
-                                    <p className={cls.description}>
-                                        {item.description.slice(0, 90)}...
-                                    </p>
-                                    <div className={cls.infoBg}>
-                                        <span className={cls.info}>
-                                            Popular - over 5000+ have shopped
-                                            this recently
-                                        </span>
-                                    </div>
-                                    <Button
-                                        className={cls.btn}
-                                        variant={ThemeEnum.dark}
-                                    >
-                                        Shop now
-                                    </Button>
-                                </div>
                             </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-                <div className={cls.arrows}>
-                    <button className="custom-prev" onClick={handlePrevClick}>
-                        <Icon Svg={NextIcon} />
-                    </button>
-                    <button className="custom-next" onClick={handleNextClick}>
-                        <Icon Svg={PrevIcon} />
-                    </button>
-                </div>
+                            <div className={cls.bannerInfo}>
+                                <h1 className={cls.title}>{item.title}</h1>
+                                <p className={cls.description}>
+                                    {item.description}
+                                </p>
+                                <div className={cls.infoBg}>
+                                    <span className={cls.info}>
+                                        {t("PopularCarousel")}
+                                    </span>
+                                </div>
+                                <Button
+                                    className={cls.btn}
+                                    variant={ThemeEnum.dark}
+                                >
+                                    {t("ShopNow")}
+                                </Button>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+            <div className={cls.arrows}>
+                <button className="custom-prev" onClick={handlePrevClick}>
+                    <Icon Svg={NextIcon} />
+                </button>
+                <button className="custom-next" onClick={handleNextClick}>
+                    <Icon Svg={PrevIcon} />
+                </button>
+            </div>
+            <div className={cls.bannerBtn}>
+                <Button variant={ThemeEnum.light} className={cls.salesBtn}>
+                    {t("PersonaliseBtn")}
+                </Button>
             </div>
         </section>
     );

@@ -2,11 +2,11 @@
     "clothing": [
         {
             "id": 1,
-            "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-            "price": 109.95,
-            "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+            "title": "Regatta",
+            "price": 69.99,
+            "description": "Regatta mens pack it iii waterproof breathable packable jacket coat",
             "category": "men's clothing",
-            "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+            "image": "https://lts-images-proxy.azureedge.net/product-images/46086593_SearchResults2x.webp",
             "rating": {
                 "rate": 3.9,
                 "count": 120
@@ -14,11 +14,10 @@
         },
         {
             "id": 2,
-            "title": "Mens Casual Premium Slim Fit T-Shirts ",
-            "price": 22.3,
-            "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-            "category": "men's clothing",
-            "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+            "title": "Regatta",
+            "price": 70.99,
+            "description": "Regatta mens pack it iii waterproof breathable packable jacket coat",
+            "image": "https://lts-images-proxy.azureedge.net/product-images/73200020_SearchResults2x.webp",
             "rating": {
                 "rate": 4.1,
                 "count": 259
@@ -26,11 +25,11 @@
         },
         {
             "id": 3,
-            "title": "Mens Cotton Jacket",
+            "title": "BOSS",
             "price": 55.99,
-            "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+            "description": "Orange Rickert Mens Shirt",
             "category": "men's clothing",
-            "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+            "image": "https://lts-images-proxy.azureedge.net/product-images/72280399_SearchResults2x.webp",
             "rating": {
                 "rate": 4.7,
                 "count": 500
@@ -38,11 +37,10 @@
         },
         {
             "id": 4,
-            "title": "Mens Casual Slim Fit",
-            "price": 15.99,
-            "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-            "category": "men's clothing",
-            "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+            "title": "GANT",
+            "price": 44.99,
+            "description": "Mens regular fit long sleeve poplin shirt",
+            "image": "https://lts-images-proxy.azureedge.net/product-images/74571190_SearchResults2x.webp",
             "rating": {
                 "rate": 2.1,
                 "count": 430
@@ -50,11 +48,11 @@
         },
         {
             "id": 15,
-            "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
-            "price": 56.99,
-            "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
+            "title": "Karen Millen",
+            "price": 130.99,
+            "description": "Embellished Wrap Woven Mini Shirt Dress",
             "category": "women's clothing",
-            "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+            "image": "https://lts-images-proxy.azureedge.net/product-images/73880809_SearchResults2x.webp",
             "rating": {
                 "rate": 2.6,
                 "count": 235
@@ -62,11 +60,11 @@
         },
         {
             "id": 16,
-            "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
-            "price": 29.95,
-            "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
+            "title": "River Island",
+            "price": 170.95,
+            "description": "Embellished Wrap Woven Mini Shirt Dress",
             "category": "women's clothing",
-            "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+            "image": "https://lts-images-proxy.azureedge.net/product-images/74455952_SearchResults2x.webp",
             "rating": {
                 "rate": 2.9,
                 "count": 340
@@ -74,11 +72,11 @@
         },
         {
             "id": 17,
-            "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+            "title": "River Island",
             "price": 39.99,
-            "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+            "description": "Textured Shirt - Cream",
             "category": "women's clothing",
-            "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+            "image": "https://lts-images-proxy.azureedge.net/product-images/74154797_SearchResults2x.webp",
             "rating": {
                 "rate": 3.8,
                 "count": 679
@@ -86,11 +84,11 @@
         },
         {
             "id": 18,
-            "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
-            "price": 9.85,
-            "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+            "title": "Fig & Basil",
+            "price": 49.85,
+            "description": "Gathered Slash Neck Jersey Top - Pink",
             "category": "women's clothing",
-            "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+            "image": "https://lts-images-proxy.azureedge.net/product-images/73844382_SearchResults2x.webp",
             "rating": {
                 "rate": 4.7,
                 "count": 130
@@ -98,11 +96,11 @@
         },
         {
             "id": 19,
-            "title": "Opna Women's Short Sleeve Moisture",
-            "price": 7.95,
-            "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
+            "title": "Levi's",
+            "price": 17.95,
+            "description": "Womens perfect v-neck t-shirt",
             "category": "women's clothing",
-            "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+            "image": "https://lts-images-proxy.azureedge.net/product-images/75249722_SearchResults2x.webp",
             "rating": {
                 "rate": 4.5,
                 "count": 146
@@ -110,11 +108,11 @@
         },
         {
             "id": 20,
-            "title": "DANVOUY Womens T Shirt Casual Cotton Short",
-            "price": 12.99,
-            "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+            "title": "Vero Moda",
+            "price": 19.99,
+            "description": "Womens tanja sleeveless top",
             "category": "women's clothing",
-            "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+            "image": "https://lts-images-proxy.azureedge.net/product-images/75235087_SearchResults2x.webp",
             "rating": {
                 "rate": 3.6,
                 "count": 145
@@ -165,6 +163,43 @@
                 "rate": 1.9,
                 "count": 100
             }
+        }
+    ],
+    "banner": [
+        {
+            "id": 1,
+            "title": "Hugo Boss",
+            "subtitle": "Popular - 1,047,879 people have shopped this recently",
+            "description": "Latest Styles on Sale",
+            "image": "https://ltsimages.blob.core.windows.net/brand-media/2726/4/10211.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Skechers",
+            "price": "Popular - 120,940 people have shopped this recently",
+            "description": "New Season Deals",
+            "image": "https://ltsimages.blob.core.windows.net/brand-media/3018/4/9983.jpg"
+        },
+        {
+            "id": 3,
+            "title": "GANT",
+            "price": "Popular - 284,732 people have shopped this recently",
+            "description": "Mid Season Sale",
+            "image": "https://ltsimages.blob.core.windows.net/brand-media/2688/4/10109.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Dune London",
+            "price": "Popular - 151,230 people have shopped this recently",
+            "description": "Big Savings on Trending Pieces",
+            "image": "https://ltsimages.blob.core.windows.net/brand-media/4972/4/9976.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Casablanca",
+            "price": "Popular - 67,699 people have shopped this recently",
+            "description": "Just Landed: Must Have Deals",
+            "image": "https://ltsimages.blob.core.windows.net/brand-media/36744/4/10272.jpg"
         }
     ]
 }
