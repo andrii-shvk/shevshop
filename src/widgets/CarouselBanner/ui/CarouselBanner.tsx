@@ -1,4 +1,4 @@
-import { useGetAllClothingQuery, useGetBannerGoodsQuery } from "@/api/rtkApi";
+import { useGetBannerGoodsQuery } from "@/api/rtkApi";
 import cls from "./CarouselBanner.module.scss";
 import { Button } from "@/components/ui/Button";
 import { ThemeEnum } from "@/const/general";
@@ -23,7 +23,7 @@ import { useTranslation } from "react-i18next";
 SwiperCore.use([Navigation, Pagination]);
 
 const CarouselBanner = () => {
-    const { data: bannerGoods, isLoading, error } = useGetBannerGoodsQuery(1);
+    const { data: bannerGoods } = useGetBannerGoodsQuery(1);
     const { t } = useTranslation();
 
     const swiperRef = useRef<SwiperCore>();

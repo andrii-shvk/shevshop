@@ -1,3 +1,4 @@
+import cls from "./CarouselCards.module.scss"
 import { IProduct } from "@/models";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Card } from "@/components/ui/Card";
@@ -16,6 +17,7 @@ const CarouselCards = ({ CardItems }: CarouselCardsProps) => {
             speed={1200}
             slidesPerView={3}
             navigation
+            className={cls.swiper}
         >
             {CardItems?.map((item, idx) => (
                 <SwiperSlide key={idx}>

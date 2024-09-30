@@ -55,11 +55,29 @@
     justify-content: space-between;
     max-width: var(--container-content);
     margin: 0 auto;
-    padding-bottom: 30px;
+}
+
+.navlinkBlock {
+    position: relative;
+    height: 50px;
 }
 
 .routeLink {
     font-size: var(--font-size-s);
-    color: var(--primary-color);
+    color: var(--light-transparent);
     font-weight: 600;
+    height: 100%;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+        color: var(--primary-color);
+        &:after {
+            content: "";
+            border-bottom: 3px solid var(--primary-color);
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }

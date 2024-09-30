@@ -9,33 +9,41 @@ import { LangSwitcher } from "@/components/ui/LangSwitcher";
 import { useTranslation } from "react-i18next";
 import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
 
-
 const Header = () => {
     const { t } = useTranslation();
 
     const handleSearch = (query: string) => {
-        console.log(query)
-    }
- 
+        console.log(query);
+    };
+
     return (
         <header className={cls.header}>
             <div className={cls.container}>
                 <div className={cls.content}>
-
-                    <Link to={'/'} className={cls.logoTitle}>SHEVSHOP</Link>
+                    <Link to={"/"} className={cls.logoTitle}>
+                        SHEVSHOP
+                    </Link>
 
                     <SearchInput
-                        onSearch={handleSearch} 
+                        onSearch={handleSearch}
                         placeholder={t("SearchInput")}
                     />
 
                     <div className={cls.icons}>
                         {HeaderIconsList.map(({ name, SvgIcon }) => (
-                            <div key={name}
+                            <div
+                                key={name}
                                 className={clsx(
                                     cls.headerIcon,
-                                    (name === "Search" || name === "Home") ? cls.hiddenIcon : "")}>
-                                <Icon Svg={SvgIcon} clickable className={cls.Icon}  />
+                                    name === "Search" || name === "Home"
+                                        ? cls.hiddenIcon
+                                        : ""
+                                )}>
+                                <Icon
+                                    Svg={SvgIcon}
+                                    clickable
+                                    className={cls.Icon}
+                                />
                                 <p className={cls.iconTitle}>{t(name)}</p>
                             </div>
                         ))}
@@ -43,13 +51,18 @@ const Header = () => {
                         <ThemeSwitcher />
                     </div>
                 </div>
-                <div className={cls.routerNav}>
-                    {routerNavigations.map(({path, title}) => (
-                        <Link key={path} to={path} className={cls.routeLink}>
-                            {t(`${title}`)}
-                        </Link>
+                <nav className={cls.routerNav}>
+                    {routerNavigations.map(({ path, title }) => (
+                        <div className={cls.navlinkBlock} key={title}>
+                            <Link
+                                key={path}
+                                to={path}
+                                className={cls.routeLink}>
+                                {t(`${title}`)}
+                            </Link>
+                        </div>
                     ))}
-                </div>
+                </nav>
             </div>
         </header>
     );
