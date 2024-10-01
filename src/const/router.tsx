@@ -1,6 +1,7 @@
 import { JeweleryPage } from "@/pages/JeweleryPage";
 import { MainPage } from "@/pages/MainPage";
 import { MensClothingPage } from "@/pages/MensClothingPage";
+import { WishListPage } from "@/pages/WishListPage";
 import { WomensClothingPage } from "@/pages/WomensClothingPage";
 import { ReactNode } from "react";
 
@@ -30,6 +31,11 @@ const routerNavigations: RouteNav[] = [
         title: "Jewelery",
         path: "/jewelery",
         element: <JeweleryPage />,
+    },
+    {
+        title: "WishList",
+        path: "/wishlist",
+        element: <WishListPage />,
     },
 ];
 

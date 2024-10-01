@@ -1,6 +1,5 @@
 import cls from "./Header.module.scss";
 import { HeaderIconsList } from "./const";
-import clsx from "clsx";
 import { Link } from "react-router-dom";
 import { SearchInput } from "@/components/ui/SearchInput";
 import { Icon } from "@/components/ui/Icon";
@@ -8,6 +7,10 @@ import { routerNavigations } from "@/const/router";
 import { LangSwitcher } from "@/components/ui/LangSwitcher";
 import { useTranslation } from "react-i18next";
 import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
+import clsx from "clsx";
+import { useFavorites } from "@/hooks/useFavorites";
+import { useEffect, useState } from "react";
+import { AppLink } from "@/components/ui/AppLink";
 
 const Header = () => {
     const { t } = useTranslation();
@@ -15,6 +18,14 @@ const Header = () => {
     const handleSearch = (query: string) => {
         console.log(query);
     };
+
+    const { favorites } = useFavorites();
+
+    const [isFav, setIsFav] = useState<boolean>(favorites.length > 0);
+
+    useEffect(() => {
+        setIsFav(favorites.length > 0);
+    }, [favorites]);
 
     return (
         <header className={cls.header}>
@@ -29,37 +40,46 @@ const Header = () => {
                         placeholder={t("SearchInput")}
                     />
 
-                    <div className={cls.icons}>
-                        {HeaderIconsList.map(({ name, SvgIcon }) => (
-                            <div
+                    <ul className={cls.icons}>
+                        {HeaderIconsList.map(({ name, SvgIcon, to }) => (
+                            <li
                                 key={name}
-                                className={clsx(
-                                    cls.headerIcon,
+                                className={`${
                                     name === "Search" || name === "Home"
                                         ? cls.hiddenIcon
                                         : ""
-                                )}>
-                                <Icon
-                                    Svg={SvgIcon}
-                                    clickable
-                                    className={cls.Icon}
-                                />
-                                <p className={cls.iconTitle}>{t(name)}</p>
-                            </div>
+                                }`}
+                            >
+                                <Link to={to} className={cls.headerIcon}>
+                                    <Icon
+                                        Svg={SvgIcon}
+                                        clickable
+                                        className={clsx(
+                                            cls.Icon,
+                                            name === "Wishlist" && isFav
+                                                ? cls.wishItems
+                                                : ""
+                                        )}
+                                    />
+                                    <p className={cls.iconTitle}>{t(name)}</p>
+                                </Link>
+                            </li>
                         ))}
                         <LangSwitcher />
                         <ThemeSwitcher />
-                    </div>
+                    </ul>
                 </div>
                 <nav className={cls.routerNav}>
-                    {routerNavigations.map(({ path, title }) => (
+                    {routerNavigations.slice(0, 4).map(({ path, title }) => (
                         <div className={cls.navlinkBlock} key={title}>
-                            <Link
+                            <AppLink
                                 key={path}
                                 to={path}
-                                className={cls.routeLink}>
+                                className={cls.routeLink}
+                                activeClassName={cls.routeLink_active}
+                            >
                                 {t(`${title}`)}
-                            </Link>
+                            </AppLink>
                         </div>
                     ))}
                 </nav>

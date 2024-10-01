@@ -3,6 +3,9 @@ import cls from "./Card.module.scss";
 import { Icon } from "../../Icon";
 import { ReactComponent as WishList } from "@/assets/icons/HeaderIcons/wishlist.svg";
 import clsx from "clsx";
+import { Button } from "../../Button";
+import { ThemeEnum } from "@/const/general";
+import { useLocation } from "react-router-dom";
 
 interface CardProps {
     CardItem: IProduct;
@@ -12,6 +15,7 @@ interface CardProps {
 }
 
 const Card = ({ CardItem, exclusive, isFavItem, toggleFav }: CardProps) => {
+    const location = useLocation();
     return (
         <>
             <article className={cls.Card}>
@@ -34,6 +38,16 @@ const Card = ({ CardItem, exclusive, isFavItem, toggleFav }: CardProps) => {
                         {CardItem.description?.slice(0, 30)}...
                     </p>
                     <p className={cls.price}>$ {CardItem.price}</p>
+                    {location.pathname === "/wishlist" && (
+                        <div className={cls.card_btn_wrap}>
+                            <Button
+                                variant={ThemeEnum.dark}
+                                className={cls.card_btn}
+                            >
+                                Get it now
+                            </Button>
+                        </div>
+                    )}
                 </div>
             </article>
         </>

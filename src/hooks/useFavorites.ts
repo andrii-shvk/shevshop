@@ -27,12 +27,10 @@ const useFavorites = () => {
             );
 
             if (isFavorite) {
-                console.log('clicked remove fav')
                 return prevFavorites.filter(
                     (prevItem) => prevItem.id !== favItem.id
                 );
             } else {
-                console.log('clicked add fav')
                 return [...prevFavorites, favItem];
             }
         });

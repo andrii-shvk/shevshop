@@ -43,7 +43,6 @@
 }
 .brand {
     font: var(--font-m);
-    margin-top: 3px;
     font-weight: 500;
 }
 .name {
@@ -54,5 +53,11 @@
 .price {
     color: var(--price-red);
     font: var(--font-m);
-    margin-top: 18px;
+    margin: 8px 0 4px 0;
+}
+.card_btn_wrap {
+    text-align: center;
+}
+.card_btn {
+    width: 100%;
 }

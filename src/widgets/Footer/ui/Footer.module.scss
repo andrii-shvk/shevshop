@@ -1,6 +1,5 @@
 .Footer {
-    padding-top: 62px;
-    margin-top: 50px;
+    padding-top: 60px;
     height: 460px;
     background-color: var(--light-bg);
     position: relative;
@@ -24,6 +23,7 @@
     flex-direction: column;
 }
 .linkHeader {
+    color: var(--primary-color);
     font-size: 16px;
     font-weight: 700;
 }
@@ -40,6 +40,9 @@
 .socialLinks {
     display: flex;
     gap: 16px;
+}
+.socialIcon {
+    color: var(--primary-color);
 }
 .logoImg {
     width: 52px;
@@ -78,7 +81,7 @@
     justify-content: center;
     align-items: center;
     height: 60px;
-    background-color: #fff;
+    background-color: var(--bg-color);
     font-size: 12px;
     color: var(--light-transparent);
     position: absolute;

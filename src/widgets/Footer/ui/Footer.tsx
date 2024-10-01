@@ -23,7 +23,7 @@ const Footer = () => {
                         <div className={cls.socialLinks}>
                             {SOCIAL_LINKS.map((socialLink, idx) => (
                                 <Link to={socialLink.to} key={idx}>
-                                    <Icon Svg={socialLink.icon} />
+                                    <Icon Svg={socialLink.icon} className={cls.socialIcon} />
                                 </Link>
                             ))}
                         </div>

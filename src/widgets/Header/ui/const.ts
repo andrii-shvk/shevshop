@@ -7,12 +7,13 @@ import { ReactComponent as Search } from "@/assets/icons/HeaderIcons/search.svg"
 interface IconsType {
     name: string;
     SvgIcon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+    to: string;
 }
 
 export const HeaderIconsList: IconsType[] = [
-    { name: "Home", SvgIcon: Home },
-    { name: "Account", SvgIcon: Account },
-    { name: "Wishlist", SvgIcon: Wishlist },
-    { name: "MyBag", SvgIcon: MyBag },
-    { name: "Search", SvgIcon: Search },
+    { name: "Home", SvgIcon: Home, to: "/" },
+    { name: "Account", SvgIcon: Account, to: "/" },
+    { name: "Wishlist", SvgIcon: Wishlist, to: "/wishlist" },
+    { name: "MyBag", SvgIcon: MyBag, to: "/" },
+    { name: "Search", SvgIcon: Search, to: "/" },
 ];

@@ -25,10 +25,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
     <Provider store={store}>
-    <ThemeProvider>
-        <I18nextProvider i18n={i18n}>
-            <RouterProvider router={router} />
-        </I18nextProvider>
-    </ThemeProvider>
+        <ThemeProvider>
+            <I18nextProvider i18n={i18n}>
+                <RouterProvider router={router} />
+            </I18nextProvider>
+        </ThemeProvider>
     </Provider>
 );
