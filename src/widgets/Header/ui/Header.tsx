@@ -8,24 +8,16 @@ import { LangSwitcher } from "@/components/ui/LangSwitcher";
 import { useTranslation } from "react-i18next";
 import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
 import clsx from "clsx";
-import { useFavorites } from "@/hooks/useFavorites";
-import { useEffect, useState } from "react";
 import { AppLink } from "@/components/ui/AppLink";
+import { useSelector } from "react-redux";
+import { getWishItems } from "@/redux/wishlist/selectors/wishlistSelector";
 
 const Header = () => {
     const { t } = useTranslation();
-
+    const favorites = useSelector(getWishItems);
     const handleSearch = (query: string) => {
         console.log(query);
     };
-
-    const { favorites } = useFavorites();
-
-    const [isFav, setIsFav] = useState<boolean>(favorites.length > 0);
-
-    useEffect(() => {
-        setIsFav(favorites.length > 0);
-    }, [favorites]);
 
     return (
         <header className={cls.header}>
@@ -56,7 +48,7 @@ const Header = () => {
                                         clickable
                                         className={clsx(
                                             cls.Icon,
-                                            name === "Wishlist" && isFav
+                                            name === "Wishlist" && favorites.length > 0
                                                 ? cls.wishItems
                                                 : ""
                                         )}

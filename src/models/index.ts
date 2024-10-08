@@ -10,6 +10,11 @@ export interface IProduct {
         count: number;
     }
 }
+
+export type IClientProduct = IProduct & {
+    quantity: number;
+}
+
 export interface IBannerGoods {
     id: string;
     title: string;

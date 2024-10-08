@@ -14,6 +14,6 @@ export const HeaderIconsList: IconsType[] = [
     { name: "Home", SvgIcon: Home, to: "/" },
     { name: "Account", SvgIcon: Account, to: "/" },
     { name: "Wishlist", SvgIcon: Wishlist, to: "/wishlist" },
-    { name: "MyBag", SvgIcon: MyBag, to: "/" },
+    { name: "MyBag", SvgIcon: MyBag, to: "/my-bag" },
     { name: "Search", SvgIcon: Search, to: "/" },
 ];

@@ -3,6 +3,7 @@ import cls from "./GucciSection.module.scss";
 import { useGetAllClothingQuery } from "@/api/rtkApi";
 import { CarouselCards } from "@/widgets/CarouselCards";
 import { useTranslation } from "react-i18next";
+import { Chevron } from "@/components/ui/Chevron";
 
 const GucciSection = () => {
     const { data: clothing } = useGetAllClothingQuery(1);
@@ -17,7 +18,7 @@ const GucciSection = () => {
                         <p className={cls.subtitle}>{t("GucciDescription")}</p>
                         <Link to={"/"} className={cls.link}>
                             {t("SeeMore")}
-                            <span className={cls.chevron}></span>
+                            <Chevron className={cls.chevron} />
                         </Link>
                     </div>
                     <div className={cls.imgBlock}>

@@ -1,4 +1,4 @@
-import { IBannerGoods, IProduct } from "@/models";
+import { IBannerGoods, IClientProduct } from "@/models";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const rtkApi = createApi({
@@ -6,13 +6,13 @@ export const rtkApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000" }),
     tagTypes: ["Goods"],
     endpoints: (builder) => ({
-        getAllClothing: builder.query<IProduct[], number>({
+        getAllClothing: builder.query<IClientProduct[], number>({
             query: () => ({
                 url: `/clothing`,
             }),
             providesTags: () => ["Goods"],
         }),
-        getAllJewelery: builder.query<IProduct[], number>({
+        getAllJewelery: builder.query<IClientProduct[], number>({
             query: () => ({
                 url: `/jewelery`,
             }),

@@ -3,11 +3,16 @@ import cls from "./WishListPage.module.scss";
 import { ReactComponent as HeartIcon } from "@/assets/icons/HeaderIcons/wishlist.svg";
 import { Button } from "@/components/ui/Button";
 import { ThemeEnum } from "@/const/general";
-import { useFavorites } from "@/hooks/useFavorites";
 import { Card } from "@/components/ui/Card";
+import { useSelector } from "react-redux";
+import { getWishItems } from "@/redux/wishlist/selectors/wishlistSelector";
+import { useDispatch } from "react-redux";
+import { toggleItemWishList } from "@/redux/wishlist/slice/wishlistSlice";
 
 const WishListPage = () => {
-    const { favorites, toggleFav } = useFavorites();
+    const favorites = useSelector(getWishItems);
+    const dispatch = useDispatch();
+
     return (
         <section className="container">
             <div className={cls.WishListPage}>
@@ -15,9 +20,16 @@ const WishListPage = () => {
                 {favorites.length > 0 ? (
                     <article className={cls.wishlist_cards}>
                         {favorites.map((item) => (
-                            <Card key={item.id} CardItem={item} toggleFav={toggleFav} isFavItem={favorites?.some(
-                                (favItem) => favItem.id === item.id
-                            )} />
+                            <Card
+                                key={item.id}
+                                CardItem={item}
+                                isFavItem={favorites?.some(
+                                    (favItem) => favItem.id === item.id
+                                )}
+                                addToWishlist={() =>
+                                    dispatch(toggleItemWishList(item))
+                                }
+                            />
                         ))}
                     </article>
                 ) : (

@@ -1,16 +1,22 @@
-import cls from "./CarouselCards.module.scss"
-import { IProduct } from "@/models";
+import cls from "./CarouselCards.module.scss";
+import { IClientProduct } from "@/models";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Card } from "@/components/ui/Card";
 import { A11y, EffectFade, Navigation, Pagination } from "swiper/modules";
-import { useFavorites } from "@/hooks/useFavorites";
+import { useSelector } from "react-redux";
+import { getWishItems } from "@/redux/wishlist/selectors/wishlistSelector";
+import { useDispatch } from "react-redux";
+import { toggleItemWishList } from "@/redux/wishlist/slice/wishlistSlice";
+import { addItemToBag } from "@/redux/bag/slice/bagSlice";
 
 interface CarouselCardsProps {
-    CardItems: IProduct[];
+    CardItems: IClientProduct[];
 }
 
 const CarouselCards = ({ CardItems }: CarouselCardsProps) => {
-    const { favorites, toggleFav } = useFavorites();
+    const dispatch = useDispatch();
+    const favorites = useSelector(getWishItems);
+
     return (
         <Swiper
             modules={[EffectFade, Navigation, Pagination, A11y]}
@@ -24,10 +30,13 @@ const CarouselCards = ({ CardItems }: CarouselCardsProps) => {
                     <Card
                         CardItem={item}
                         exclusive
-                        toggleFav={toggleFav}
-                        isFavItem={favorites?.some(
-                            (favItem) => favItem.id === item.id
-                        )}
+                        addToBag={() => dispatch(addItemToBag(item))}
+                        isFavItem={
+                            !!favorites.find(
+                                (favItem) => favItem.id === item.id
+                            )
+                        }
+                        addToWishlist={() => dispatch(toggleItemWishList(item))}
                     />
                 </SwiperSlide>
             ))}

@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 270px;
-    height: 500px;
+    height: 100%;
     background-color: #fff;
     position: relative;
     transition: all 0.3s ease-in-out;
@@ -36,7 +36,7 @@
 .cardInfo {
     display: flex;
     flex-direction: column;
-    padding: 12px 12px 33px 12px;
+    padding: 12px;
 }
 .header {
     color: var(--light-transparent);
@@ -53,7 +53,7 @@
 .price {
     color: var(--price-red);
     font: var(--font-m);
-    margin: 8px 0 4px 0;
+    margin: 8px 0 12px 0;
 }
 .card_btn_wrap {
     text-align: center;

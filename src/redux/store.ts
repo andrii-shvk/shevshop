@@ -1,15 +1,27 @@
-import { rtkApi } from '@/api/rtkApi';
-import { configureStore } from '@reduxjs/toolkit';
+import { rtkApi } from "@/api/rtkApi";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { persistStore } from "redux-persist";
+import { clothingReducer } from "./clothing/slices/clothingSlice";
+import { persistedWishList } from "./wishlist/slice/wishlistSlice";
+import { persistedBagReducer } from "./bag/slice/bagSlice";
 
-export const store = configureStore({
-  reducer: {
-    // Включаем API reducer в store
+export const rootReducer = combineReducers({
+    clothings: clothingReducer,
+    wishlist: persistedWishList,
+    bag: persistedBagReducer,
     [rtkApi.reducerPath]: rtkApi.reducer,
-  },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(rtkApi.middleware),
 });
 
-// Определяем типы для использования в хуках
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+export const store = configureStore({
+    reducer: rootReducer,
+    middleware: (getDefaultMiddleWare) =>
+        getDefaultMiddleWare({
+            serializableCheck: false,
+        }).concat(rtkApi.middleware),
+});
+
+export const persistor = persistStore(store);
+
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = typeof store;
+export type AppDispatch = AppStore["dispatch"];
