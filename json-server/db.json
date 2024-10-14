@@ -1,11 +1,11 @@
 {
-    "clothing": [
+    "man-clothing": [
         {
             "id": 1,
             "title": "Regatta",
             "price": 69.99,
+            "category": "man-clothing",
             "description": "Regatta mens pack it iii waterproof breathable packable jacket coat",
-            "category": "men's clothing",
             "image": "https://lts-images-proxy.azureedge.net/product-images/46086593_SearchResults2x.webp",
             "rating": {
                 "rate": 3.9,
@@ -16,6 +16,7 @@
             "id": 2,
             "title": "Regatta",
             "price": 70.99,
+            "category": "man-clothing",
             "description": "Regatta mens pack it iii waterproof breathable packable jacket coat",
             "image": "https://lts-images-proxy.azureedge.net/product-images/73200020_SearchResults2x.webp",
             "rating": {
@@ -27,8 +28,8 @@
             "id": 3,
             "title": "BOSS",
             "price": 55.99,
+            "category": "man-clothing",
             "description": "Orange Rickert Mens Shirt",
-            "category": "men's clothing",
             "image": "https://lts-images-proxy.azureedge.net/product-images/72280399_SearchResults2x.webp",
             "rating": {
                 "rate": 4.7,
@@ -39,19 +40,22 @@
             "id": 4,
             "title": "GANT",
             "price": 44.99,
+            "category": "man-clothing",
             "description": "Mens regular fit long sleeve poplin shirt",
             "image": "https://lts-images-proxy.azureedge.net/product-images/74571190_SearchResults2x.webp",
             "rating": {
                 "rate": 2.1,
                 "count": 430
             }
-        },
+        }
+    ],
+    "woman-clothing":[
         {
             "id": 15,
             "title": "Karen Millen",
             "price": 130.99,
             "description": "Embellished Wrap Woven Mini Shirt Dress",
-            "category": "women's clothing",
+            "category": "woman-clothing",
             "image": "https://lts-images-proxy.azureedge.net/product-images/73880809_SearchResults2x.webp",
             "rating": {
                 "rate": 2.6,
@@ -63,7 +67,7 @@
             "title": "River Island",
             "price": 170.95,
             "description": "Embellished Wrap Woven Mini Shirt Dress",
-            "category": "women's clothing",
+            "category": "woman-clothing",
             "image": "https://lts-images-proxy.azureedge.net/product-images/74455952_SearchResults2x.webp",
             "rating": {
                 "rate": 2.9,
@@ -75,7 +79,7 @@
             "title": "River Island",
             "price": 39.99,
             "description": "Textured Shirt - Cream",
-            "category": "women's clothing",
+            "category": "woman-clothing",
             "image": "https://lts-images-proxy.azureedge.net/product-images/74154797_SearchResults2x.webp",
             "rating": {
                 "rate": 3.8,
@@ -87,7 +91,7 @@
             "title": "Fig & Basil",
             "price": 49.85,
             "description": "Gathered Slash Neck Jersey Top - Pink",
-            "category": "women's clothing",
+            "category": "woman-clothing",
             "image": "https://lts-images-proxy.azureedge.net/product-images/73844382_SearchResults2x.webp",
             "rating": {
                 "rate": 4.7,
@@ -99,7 +103,7 @@
             "title": "Levi's",
             "price": 17.95,
             "description": "Womens perfect v-neck t-shirt",
-            "category": "women's clothing",
+            "category": "woman-clothing",
             "image": "https://lts-images-proxy.azureedge.net/product-images/75249722_SearchResults2x.webp",
             "rating": {
                 "rate": 4.5,
@@ -111,7 +115,7 @@
             "title": "Vero Moda",
             "price": 19.99,
             "description": "Womens tanja sleeveless top",
-            "category": "women's clothing",
+            "category": "woman-clothing",
             "image": "https://lts-images-proxy.azureedge.net/product-images/75235087_SearchResults2x.webp",
             "rating": {
                 "rate": 3.6,

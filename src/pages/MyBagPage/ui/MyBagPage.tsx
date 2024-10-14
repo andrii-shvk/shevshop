@@ -9,10 +9,11 @@ import { getBagItems } from "@/redux/bag/selectors/bagSelector";
 import { useDispatch } from "react-redux";
 import { decreaseItem, increaseItem } from "@/redux/bag/slice/bagSlice";
 import { calcTotalPrice } from "@/const/calcTotalPrice";
+import { AppDispatch } from "@/redux/store";
 
 const MyBagPage = () => {
     const bagItems = useSelector(getBagItems);
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<AppDispatch>();
 
     return (
         <section className={cls.MyBagPage}>

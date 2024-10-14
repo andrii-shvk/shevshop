@@ -1,4 +1,4 @@
-import { IBannerGoods, IClientProduct } from "@/models";
+import { IClientProduct } from "@/models";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const rtkApi = createApi({
@@ -6,19 +6,25 @@ export const rtkApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000" }),
     tagTypes: ["Goods"],
     endpoints: (builder) => ({
-        getAllClothing: builder.query<IClientProduct[], number>({
+        getManClothing: builder.query<IClientProduct[], void>({
             query: () => ({
-                url: `/clothing`,
+                url: `/man-clothing`,
             }),
             providesTags: () => ["Goods"],
         }),
-        getAllJewelery: builder.query<IClientProduct[], number>({
+        getWomanClothing: builder.query<IClientProduct[], void>({
+            query: () => ({
+                url: `/woman-clothing`,
+            }),
+            providesTags: () => ["Goods"],
+        }),
+        getAllJewelery: builder.query<IClientProduct[], void>({
             query: () => ({
                 url: `/jewelery`,
             }),
             providesTags: () => ["Goods"],
         }),
-        getBannerGoods: builder.query<IBannerGoods[], number>({
+        getBannerGoods: builder.query<IClientProduct[], void>({
             query: () => ({
                 url: `/banner`,
             }),
@@ -27,6 +33,9 @@ export const rtkApi = createApi({
     }),
 });
 
-export const { useGetAllClothingQuery } = rtkApi;
-export const { useGetAllJeweleryQuery } = rtkApi;
-export const { useGetBannerGoodsQuery } = rtkApi;
+export const {
+    useGetBannerGoodsQuery,
+    useGetManClothingQuery,
+    useGetAllJeweleryQuery,
+    useGetWomanClothingQuery
+} = rtkApi;

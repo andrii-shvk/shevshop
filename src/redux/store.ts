@@ -1,14 +1,14 @@
 import { rtkApi } from "@/api/rtkApi";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { persistStore } from "redux-persist";
-import { clothingReducer } from "./clothing/slices/clothingSlice";
 import { persistedWishList } from "./wishlist/slice/wishlistSlice";
 import { persistedBagReducer } from "./bag/slice/bagSlice";
+import { clothingItemReducer } from "./clothingItem/slice/clothingItemSlice";
 
 export const rootReducer = combineReducers({
-    clothings: clothingReducer,
     wishlist: persistedWishList,
     bag: persistedBagReducer,
+    clothingItem: clothingItemReducer,
     [rtkApi.reducerPath]: rtkApi.reducer,
 });
 

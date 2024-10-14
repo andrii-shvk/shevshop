@@ -10,6 +10,8 @@ import { ThemeProvider } from "./providers/ThemeProvider";
 import { Provider } from "react-redux";
 import { persistor, store } from "./redux/store";
 import { PersistGate } from "redux-persist/integration/react";
+import { PageLoader } from "./components/ui/PageLoader";
+import { LayoutContextProvider } from "./providers/LayoutContextProvider/ui/LayoutContextProvider";
 
 const router = createBrowserRouter([
     {
@@ -17,9 +19,7 @@ const router = createBrowserRouter([
         element: <MainLayout />,
         children: routerNavigations.map(({ path, element }) => ({
             path: path,
-            element: (
-                <Suspense fallback={<h1>Loading...</h1>}>{element}</Suspense>
-            ),
+            element: <Suspense fallback={<PageLoader />}>{element}</Suspense>,
         })),
     },
 ]);
@@ -27,11 +27,15 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
     <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-            <ThemeProvider>
-                <I18nextProvider i18n={i18n}>
-                    <RouterProvider router={router} />
-                </I18nextProvider>
-            </ThemeProvider>
+            <LayoutContextProvider>
+                <ThemeProvider>
+                    <I18nextProvider i18n={i18n}>
+                        <Suspense fallback={<PageLoader />}>
+                            <RouterProvider router={router} />
+                        </Suspense>
+                    </I18nextProvider>
+                </ThemeProvider>
+            </LayoutContextProvider>
         </PersistGate>
     </Provider>
 );

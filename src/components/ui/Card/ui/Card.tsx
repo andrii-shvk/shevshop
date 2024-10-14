@@ -5,15 +5,21 @@ import { ReactComponent as WishList } from "@/assets/icons/HeaderIcons/wishlist.
 import clsx from "clsx";
 import { Button } from "../../Button";
 import { ThemeEnum } from "@/const/general";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Modal } from "../../Modal";
+import { ModalItemLayout } from "../../ModalItemLayout";
+import { LayoutProvider } from "@/providers/LayoutContextProvider/ui/LayoutContextProvider";
 
 interface CardProps {
     CardItem: IClientProduct;
+    clothingItem?: IClientProduct;
     exclusive?: boolean;
     addToBag?: (CardItem: IClientProduct) => void;
     removeFromBag?: (CardItem: IClientProduct) => void;
     isFavItem?: boolean;
     addToWishlist?: (CardItem: IClientProduct) => void;
+    getItToMyBag?: (CardItem: IClientProduct) => void;
 }
 
 const Card = ({
@@ -22,13 +28,35 @@ const Card = ({
     addToWishlist,
     isFavItem,
     addToBag,
+    clothingItem,
+    getItToMyBag,
 }: CardProps) => {
     const location = useLocation();
+    const { openPopup } = useContext(LayoutProvider);
+    const [openModal, setOpenModal] = useState<boolean>(false);
+
+    const addToBagItem = () => {
+        if (addToBag) {
+            addToBag(CardItem);
+            openPopup();
+        }
+    };
+
+    const getItToModalWindow = () => {
+        if (getItToMyBag) {
+            getItToMyBag(CardItem);
+            setOpenModal(true);
+        } else {
+            console.warn("getItToMyBag is not provided");
+        }
+    };
 
     return (
         <>
             <article className={cls.Card}>
-                <button onClick={() => addToWishlist!(CardItem)}>
+                <button
+                    onClick={() => addToWishlist && addToWishlist(CardItem)}
+                >
                     <Icon
                         Svg={WishList}
                         className={clsx(
@@ -52,24 +80,34 @@ const Card = ({
                             <Button
                                 variant={ThemeEnum.dark}
                                 className={cls.card_btn}
-                                onClick={() => addToBag!(CardItem)}
+                                onClick={addToBagItem}
                             >
                                 Add to MyBag
                             </Button>
                         </div>
                     )}
                     {location.pathname === "/wishlist" && (
-                        <Link to={"/my-bag"} className={cls.card_btn_wrap}>
-                            <Button
-                                variant={ThemeEnum.dark}
-                                className={cls.card_btn}
-                                onClick={() => addToBag!(CardItem)}
-                            >
-                                Get it now
-                            </Button>
-                        </Link>
+                        <Button
+                            variant={ThemeEnum.dark}
+                            className={cls.card_btn}
+                            onClick={getItToModalWindow}
+                        >
+                            Get it now
+                        </Button>
                     )}
                 </div>
+                {clothingItem && (
+                    <Modal
+                        isOpen={openModal}
+                        onClose={() => setOpenModal(false)}
+                    >
+                        <ModalItemLayout
+                            Item={clothingItem}
+                            openModal={openModal}
+                            onClose={() => setOpenModal(false)}
+                        />
+                    </Modal>
+                )}
             </article>
         </>
     );

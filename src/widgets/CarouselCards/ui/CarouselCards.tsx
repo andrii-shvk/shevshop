@@ -8,13 +8,14 @@ import { getWishItems } from "@/redux/wishlist/selectors/wishlistSelector";
 import { useDispatch } from "react-redux";
 import { toggleItemWishList } from "@/redux/wishlist/slice/wishlistSlice";
 import { addItemToBag } from "@/redux/bag/slice/bagSlice";
+import { AppDispatch } from "@/redux/store";
 
 interface CarouselCardsProps {
     CardItems: IClientProduct[];
 }
 
 const CarouselCards = ({ CardItems }: CarouselCardsProps) => {
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<AppDispatch>();
     const favorites = useSelector(getWishItems);
 
     return (

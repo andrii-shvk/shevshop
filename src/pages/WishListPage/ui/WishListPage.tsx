@@ -8,30 +8,43 @@ import { useSelector } from "react-redux";
 import { getWishItems } from "@/redux/wishlist/selectors/wishlistSelector";
 import { useDispatch } from "react-redux";
 import { toggleItemWishList } from "@/redux/wishlist/slice/wishlistSlice";
+import { AppDispatch } from "@/redux/store";
+import { getClothingItem } from "@/redux/clothingItem/selectors/clothingItemSelector";
+import { fetchClothingItem } from "@/redux/clothingItem/services/fetchClothingItem";
+import { IClientProduct } from "@/models";
 
 const WishListPage = () => {
+    const dispatch = useDispatch<AppDispatch>();
     const favorites = useSelector(getWishItems);
-    const dispatch = useDispatch();
+    const clothingItem = useSelector(getClothingItem);
+
+    const getItToMyBag = (CardItem: IClientProduct) => {
+        dispatch(
+            fetchClothingItem({ category: CardItem.category, id: CardItem.id })
+        );
+    };
+
+    const handleWishlistToggle = (item: IClientProduct) => {
+        dispatch(toggleItemWishList(item));
+    };
 
     return (
         <section className="container">
             <div className={cls.WishListPage}>
                 <h1 className={cls.wishlist_header}>My shortlist</h1>
                 {favorites.length > 0 ? (
-                    <article className={cls.wishlist_cards}>
+                    <div className={cls.wishlist_cards}>
                         {favorites.map((item) => (
                             <Card
                                 key={item.id}
                                 CardItem={item}
-                                isFavItem={favorites?.some(
-                                    (favItem) => favItem.id === item.id
-                                )}
-                                addToWishlist={() =>
-                                    dispatch(toggleItemWishList(item))
-                                }
+                                isFavItem
+                                addToWishlist={() => handleWishlistToggle(item)}
+                                clothingItem={clothingItem}
+                                getItToMyBag={getItToMyBag}
                             />
                         ))}
-                    </article>
+                    </div>
                 ) : (
                     <div className={cls.wishlist_block}>
                         <h2 className={cls.wishlist_title}>

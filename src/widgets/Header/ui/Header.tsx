@@ -11,6 +11,9 @@ import clsx from "clsx";
 import { AppLink } from "@/components/ui/AppLink";
 import { useSelector } from "react-redux";
 import { getWishItems } from "@/redux/wishlist/selectors/wishlistSelector";
+import { useContext } from "react";
+import { LayoutProvider } from "@/providers/LayoutContextProvider/ui/LayoutContextProvider";
+import { OpenPopup } from "@/components/ui/OpenPopup";
 
 const Header = () => {
     const { t } = useTranslation();
@@ -18,9 +21,11 @@ const Header = () => {
     const handleSearch = (query: string) => {
         console.log(query);
     };
+    const { popup } = useContext(LayoutProvider);
 
     return (
         <header className={cls.header}>
+            {popup && <OpenPopup />}
             <div className={cls.container}>
                 <div className={cls.content}>
                     <Link to={"/"} className={cls.logoTitle}>
@@ -48,7 +53,8 @@ const Header = () => {
                                         clickable
                                         className={clsx(
                                             cls.Icon,
-                                            name === "Wishlist" && favorites.length > 0
+                                            name === "Wishlist" &&
+                                                favorites.length > 0
                                                 ? cls.wishItems
                                                 : ""
                                         )}

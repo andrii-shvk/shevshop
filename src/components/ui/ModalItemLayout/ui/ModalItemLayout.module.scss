@@ -1,0 +1,40 @@
+.body {
+    display: flex;
+    border-radius: 10px;
+    gap: 50px;
+}
+.image {
+    width: 560px;
+    height: 600px;
+    object-fit: contain;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content_header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.content_title_block {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.price {
+    font: var(--font-xl);
+    font-weight: 500;
+}
+.logoImg {
+    width: 52px;
+    height: 52px;
+}
+.title {
+    font: var(--font-l);
+    font-weight: 500;
+}
+.footer_btn {
+    width: 100%;
+}

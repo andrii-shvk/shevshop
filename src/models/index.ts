@@ -3,7 +3,7 @@ export interface IProduct {
     title: string;
     price: number;
     description?: string;
-    category?: string;
+    category: string;
     image: string;
     rating: {
         rate: number;
@@ -13,12 +13,4 @@ export interface IProduct {
 
 export type IClientProduct = IProduct & {
     quantity: number;
-}
-
-export interface IBannerGoods {
-    id: string;
-    title: string;
-    subtitle: string;
-    description: string;
-    image: string;
 }

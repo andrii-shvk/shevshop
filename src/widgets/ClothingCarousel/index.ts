@@ -1,0 +1,1 @@
+export { ClothingCarousel } from "./ui/ClothingCarousel";

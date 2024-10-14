@@ -23,7 +23,7 @@ import { useTranslation } from "react-i18next";
 SwiperCore.use([Navigation, Pagination]);
 
 const CarouselBanner = () => {
-    const { data: bannerGoods } = useGetBannerGoodsQuery(1);
+    const { data: bannerGoods } = useGetBannerGoodsQuery();
     const { t } = useTranslation();
 
     const swiperRef = useRef<SwiperCore>();
