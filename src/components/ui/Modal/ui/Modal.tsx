@@ -1,14 +1,16 @@
 import cls from "./Modal.module.scss";
 import { Dialog, DialogPanel } from "@headlessui/react";
+import clsx from "clsx";
 import { ReactNode } from "react";
 
 interface ModalWindowProps {
     children?: ReactNode;
-    isOpen?: boolean;
+    isOpen: boolean;
     onClose?: (value: boolean) => void;
+    className?: string;
 }
 
-const Modal = ({ children, isOpen, onClose }: ModalWindowProps) => {
+const Modal = ({ children, isOpen, onClose, className }: ModalWindowProps) => {
     const handleClose = () => {
         if (onClose) {
             onClose(false);
@@ -16,8 +18,8 @@ const Modal = ({ children, isOpen, onClose }: ModalWindowProps) => {
     };
     return (
         <Dialog open={isOpen} onClose={handleClose} transition className={cls.Dialog}>
-            <div className={cls.container} onClick={handleClose}>
-                <DialogPanel className={cls.panel}>{children}</DialogPanel>
+            <div className={cls.container}>
+                <DialogPanel className={clsx(cls.panel, className)}>{children}</DialogPanel>
             </div>
         </Dialog>
     );

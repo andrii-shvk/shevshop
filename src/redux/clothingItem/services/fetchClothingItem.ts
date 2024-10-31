@@ -15,7 +15,7 @@ export const fetchClothingItem = createAsyncThunk<
     const { category, id } = params;
     try {
         const response = await axios.get<IClientProduct>(
-            `${import.meta.env.VITE_MAIN_URL}/${category}/${id}`
+            `${__API__}/${category}/${id}`
         );
         return response.data;
     } catch (error) {

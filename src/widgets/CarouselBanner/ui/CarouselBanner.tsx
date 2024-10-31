@@ -19,11 +19,12 @@ import { ReactComponent as PrevIcon } from "@/assets/icons/Arrows/arrow-prev.svg
 import { useRef } from "react";
 import SwiperCore from "swiper";
 import { useTranslation } from "react-i18next";
+import { Skeleton } from "@/components/ui/Skeleton";
 
 SwiperCore.use([Navigation, Pagination]);
 
 const CarouselBanner = () => {
-    const { data: bannerGoods } = useGetBannerGoodsQuery();
+    const { data: bannerGoods, isLoading, error } = useGetBannerGoodsQuery();
     const { t } = useTranslation();
 
     const swiperRef = useRef<SwiperCore>();
@@ -38,6 +39,19 @@ const CarouselBanner = () => {
             swiperRef.current.slideNext();
         }
     };
+    const bannerSkeleton = new Array(1).fill(0).map((_, i) => (
+        <div className={cls.bannerCard} key={i}>
+            <div className={cls.imgCard} style={{background: "#1c1a1a73"}}>
+                <Skeleton height="580px" width="580px" border="8px" variantClass="dark" />
+            </div>
+            <div className={cls.bannerInfo}>
+                <Skeleton height="40px" width="200px" border="3px" variantClass="dark" />
+                <Skeleton height="20px" width="250px" border="3px" variantClass="dark" />
+                    <Skeleton width="370px" height="20px" border="4px" variantClass="dark" />
+                <Skeleton width="182px" height="40px" border="8px" variantClass="dark" />
+            </div>
+        </div>
+    ));
 
     return (
         <section className={cls.CarouselBanner}>
@@ -52,6 +66,7 @@ const CarouselBanner = () => {
                     swiperRef.current = swiper;
                 }}
             >
+                {isLoading && bannerSkeleton}
                 {bannerGoods?.map((item, idx) => (
                     <SwiperSlide key={idx}>
                         <div className={cls.bannerCard}>
@@ -82,6 +97,7 @@ const CarouselBanner = () => {
                         </div>
                     </SwiperSlide>
                 ))}
+                {error && <h1 className={cls.error}>Sorry... Can not get the data!</h1>}
             </Swiper>
             <div className={cls.arrows}>
                 <button className="custom-prev" onClick={handlePrevClick}>

@@ -10,6 +10,12 @@
         }
     }
 }
+.error {
+    font: var(--font-xxl);
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 120px;
+}
 .arrows {
     opacity: 0;
     transition: opacity 0.2s ease-in-out;

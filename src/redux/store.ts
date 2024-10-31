@@ -4,11 +4,14 @@ import { persistStore } from "redux-persist";
 import { persistedWishList } from "./wishlist/slice/wishlistSlice";
 import { persistedBagReducer } from "./bag/slice/bagSlice";
 import { clothingItemReducer } from "./clothingItem/slice/clothingItemSlice";
+import { authReducer } from "./auth/slice/authSlice";
+// import { persistedAuthReducer } from "./auth/slice/authSlice";
 
 export const rootReducer = combineReducers({
     wishlist: persistedWishList,
     bag: persistedBagReducer,
     clothingItem: clothingItemReducer,
+    auth: authReducer,
     [rtkApi.reducerPath]: rtkApi.reducer,
 });
 

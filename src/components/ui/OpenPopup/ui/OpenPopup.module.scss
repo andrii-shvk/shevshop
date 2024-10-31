@@ -1,4 +1,4 @@
-.OpenPopup {
+.primaryPopup {
     position: fixed;
     right: 100px;
     top: 85px;
@@ -11,4 +11,16 @@
     height: 40px;
     color: var(--primary-color);
     z-index: 90;
+}
+
+.loginPopup {
+    @extend .primaryPopup;
+    padding: 30px;
+    justify-content: center;
+    background-color: #c5d3e0;
+    color: var(--green-light);
+    font: var(--font-l);
+    left: 50%;
+    transform: translate(-50%);
+    top: 120px;
 }

@@ -2,6 +2,7 @@ import { JeweleryPage } from "@/pages/JeweleryPage";
 import { MainPage } from "@/pages/MainPage";
 import { MensClothingPage } from "@/pages/MensClothingPage";
 import { MyBagPage } from "@/pages/MyBagPage";
+import { PrivateRoute } from "@/pages/PrivateRoute";
 import { WishListPage } from "@/pages/WishListPage";
 import { WomensClothingPage } from "@/pages/WomensClothingPage";
 import { ReactNode } from "react";
@@ -41,7 +42,11 @@ const routerNavigations: RouteNav[] = [
     {
         title: "My-Bag",
         path: "/my-bag",
-        element: <MyBagPage />,
+        element: (
+            <PrivateRoute>
+                <MyBagPage />
+            </PrivateRoute>
+        ),
     },
 ];
 

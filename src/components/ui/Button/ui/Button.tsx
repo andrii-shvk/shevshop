@@ -8,6 +8,7 @@ interface BtnProps {
     onClick?: () => void;
     variant?: ThemeEnum;
     active?: boolean;
+    disabled?: boolean
 }
 
 const Button = ({
@@ -16,13 +17,16 @@ const Button = ({
     onClick,
     variant = ThemeEnum.light,
     active = false,
+    disabled = false,
 }: BtnProps) => {
     return (
         <button
             className={clsx(cls.btn, className, cls[variant], {
                 [cls.active]: active,
+                [cls.disabled]: disabled
             })}
             onClick={onClick}
+            disabled={disabled}
         >
             {children}
         </button>

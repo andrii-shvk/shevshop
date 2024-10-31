@@ -1,11 +1,12 @@
-import cls from './OpenPopup.module.scss';
+import cls from "./OpenPopup.module.scss";
 
-const OpenPopup = () => {
-    return (
-        <div className={cls.OpenPopup}>
-            The product has been successfully added to MyBag!
-        </div>
-    );
+interface OpenPopupProps {
+    children: string;
+    variant?: "primaryPopup" | "loginPopup";
 }
 
-export { OpenPopup }
+const OpenPopup = ({ children, variant = "primaryPopup" }: OpenPopupProps) => {
+    return <div className={cls[variant]}>{children}</div>;
+};
+
+export { OpenPopup };

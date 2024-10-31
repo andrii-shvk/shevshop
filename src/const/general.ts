@@ -8,7 +8,7 @@ export type Theme = "light" | "dark";
 export enum ThemeEnum {
     light = "light",
     dark = "dark",
-    plusMinus = "plusMinus"
+    plusMinus = "plusMinus",
 }
 
 interface ISocialLinks {

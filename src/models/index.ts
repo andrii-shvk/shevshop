@@ -14,3 +14,9 @@ export interface IProduct {
 export type IClientProduct = IProduct & {
     quantity: number;
 }
+
+export interface IUser {
+    email: string;
+    isActivated: boolean;
+    id: string;
+}
