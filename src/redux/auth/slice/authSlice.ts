@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { login } from "../services/login";
 import { registration } from "../services/registration";
 import { logout } from "../services/logout";
