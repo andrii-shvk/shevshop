@@ -1,0 +1,65 @@
+.section {
+  background-color: #A1BFC7;
+  margin-top: 90px;
+}
+
+.contentInfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--container-body);
+  padding: 0 36px;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.contentBlock {
+  max-width: 440px;
+}
+
+.title {
+  font: var(--font-xxl);
+  color: var(--primary-color);
+}
+
+.subtitle {
+  color: var(--primary-color);
+  font: var(--font-m);
+  font-weight: 500;
+  margin: 20px 0 32px 0;
+}
+
+.link {
+  color: #000;
+  transition: all 0.2s ease;
+  font: var(--font-m);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.link:hover {
+  color: #007bff;
+}
+.link:hover .chevron {
+  border-right-color: #007bff;
+  border-bottom-color: #007bff;
+  margin-left: 3px;
+}
+
+.imgBlock {
+  display: flex;
+  gap: 10px;
+}
+
+.img {
+  height: 346px;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.cardsBlock {
+  display: flex;
+  background: #96ACB2;
+  padding: 40px 0px 40px 115px;
+}/*# sourceMappingURL=GucciSection.module.css.map */

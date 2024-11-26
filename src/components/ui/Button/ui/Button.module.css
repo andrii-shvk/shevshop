@@ -1,0 +1,48 @@
+.btn {
+  display: inline-block;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.light {
+  background-color: rgba(255, 255, 255, 0.7607843137);
+  color: #333;
+  border: 1px solid #333;
+}
+.light:hover {
+  background-color: #100f0f;
+  color: #f5f5f5;
+}
+.light.disabled {
+  opacity: 0.5;
+  background-color: rgba(255, 255, 255, 0.7607843137);
+  color: #333;
+}
+
+.dark {
+  background-color: #333;
+  color: #f5f5f5;
+}
+.dark:active {
+  background-color: #100f0f;
+}
+.dark.disabled {
+  opacity: 0.5;
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+.plusMinus {
+  display: inline-block;
+  padding: 0px 16px;
+  font: var(--font-xl);
+}/*# sourceMappingURL=Button.module.css.map */

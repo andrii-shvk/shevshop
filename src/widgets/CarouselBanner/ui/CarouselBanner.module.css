@@ -1,0 +1,85 @@
+.CarouselBanner {
+  background-color: #b0c2c1;
+  height: 520px;
+  padding-top: 55px;
+  margin-bottom: 280px;
+}
+.CarouselBanner:hover .arrows {
+  opacity: 1;
+}
+
+.error {
+  font: var(--font-xxl);
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 120px;
+}
+
+.arrows {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.bannerCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 52px;
+}
+
+.imgCard {
+  height: 580px;
+  width: 580px;
+  padding: 0 35px 0 0;
+}
+
+.img {
+  border-radius: 8px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.bannerInfo {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  width: 550px;
+  gap: 34px;
+}
+
+.title {
+  color: var(--primary-color);
+  font: var(--font-xl);
+}
+
+.description {
+  font: var(--font-l);
+}
+
+.infoBg {
+  padding: 5px 10px 5px 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 370px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.info {
+  font: var(--font-s);
+  color: #fff;
+}
+
+.btn {
+  width: 182px;
+}
+
+.bannerBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.salesBtn {
+  font: var(--font-m);
+  margin: 40px 0 34px 0;
+}/*# sourceMappingURL=CarouselBanner.module.css.map */

@@ -1,0 +1,30 @@
+:root {
+  --font-family-header: "Arial", sans-serif;
+  --font-family-main: "Roboto", sans-serif;
+  --font-size-xs: 14px;
+  --font-line-xs: 18px;
+  --font-xs: var(--font-size-xs) / var(--font-line-xs) var(--font-family-main);
+  --font-size-s: 16px;
+  --font-line-s: 22px;
+  --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+  --font-size-m: 18px;
+  --font-line-m: 24px;
+  --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+  --font-size-l: 24px;
+  --font-line-l: 30px;
+  --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+  --font-size-xl: 40px;
+  --font-line-xl: 48px;
+  --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+  --font-size-xxl: 70px;
+  --font-line-xxl: 78px;
+  --font-xxl: var(--font-size-xxl) / var(--font-line-xxl) var(--font-family-main);
+  --content-header-height: 150px;
+  --content-footer-height: 460px;
+  --light-svg: #bbc4d0;
+  --green-light: #00b18a;
+  --light-transparent: #8c8c8c;
+  --price-red: #e71d34;
+  --container-body: 1300px;
+  --container-content: 1080px;
+}/*# sourceMappingURL=global.css.map */
