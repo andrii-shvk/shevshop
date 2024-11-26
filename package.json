@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "deploy": "npm run build && git push origin `git subtree split --prefix dist skeleton-feature`:gh-pages --force",
+    "deploy": "npm run build && git subtree push --prefix dist origin gh-pages --force",
     "lint": "eslint .",
     "preview": "vite preview"
   },
