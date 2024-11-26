@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import cls from "./AppLink.module.scss";
 import clsx from "clsx";
 
 interface AppLinkProps {
