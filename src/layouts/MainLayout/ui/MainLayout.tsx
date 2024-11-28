@@ -30,6 +30,7 @@ const MainLayout = () => {
                 closeAccountWindow={closeAccountWindow}
             />
             <Header />
+            Test branch
             <main className={cls.main}>
                 <Outlet />
             </main>
