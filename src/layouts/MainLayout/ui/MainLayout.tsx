@@ -30,7 +30,7 @@ const MainLayout = () => {
                 closeAccountWindow={closeAccountWindow}
             />
             <Header />
-            Just test in NEWFET
+            Just test in Skeleton-Feature
             <main className={cls.main}>
                 <Outlet />
             </main>
