@@ -30,7 +30,7 @@ const MainLayout = () => {
                 closeAccountWindow={closeAccountWindow}
             />
             <Header />
-            Test branch
+            Just test in NEWFET
             <main className={cls.main}>
                 <Outlet />
             </main>
