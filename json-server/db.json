@@ -180,28 +180,28 @@
         {
             "id": 2,
             "title": "Skechers",
-            "price": "Popular - 120,940 people have shopped this recently",
+            "subtitle": "Popular - 120,940 people have shopped this recently",
             "description": "New Season Deals",
             "image": "https://ltsimages.blob.core.windows.net/brand-media/3018/4/9983.jpg"
         },
         {
             "id": 3,
             "title": "GANT",
-            "price": "Popular - 284,732 people have shopped this recently",
+            "subtitle": "Popular - 284,732 people have shopped this recently",
             "description": "Mid Season Sale",
             "image": "https://ltsimages.blob.core.windows.net/brand-media/2688/4/10109.jpg"
         },
         {
             "id": 4,
             "title": "Dune London",
-            "price": "Popular - 151,230 people have shopped this recently",
+            "subtitle": "Popular - 151,230 people have shopped this recently",
             "description": "Big Savings on Trending Pieces",
             "image": "https://ltsimages.blob.core.windows.net/brand-media/4972/4/9976.jpg"
         },
         {
             "id": 5,
             "title": "Casablanca",
-            "price": "Popular - 67,699 people have shopped this recently",
+            "subtitle": "Popular - 67,699 people have shopped this recently",
             "description": "Just Landed: Must Have Deals",
             "image": "https://ltsimages.blob.core.windows.net/brand-media/36744/4/10272.jpg"
         }

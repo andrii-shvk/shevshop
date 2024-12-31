@@ -59,7 +59,7 @@ export const authSlice = createSlice({
         });
         builder.addCase(checkAuth.rejected, (state, action) => {
             state.incorrectData = action.payload as string;
-        })
+        });
     },
 });
 

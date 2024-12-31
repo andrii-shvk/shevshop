@@ -1,0 +1,114 @@
+.Footer {
+  padding-top: 60px;
+  height: 460px;
+  background-color: var(--light-bg);
+  position: relative;
+}
+
+.background {
+  display: flex;
+  justify-content: space-between;
+}
+
+.brandSocial {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.siteLinks {
+  display: flex;
+  justify-content: space-between;
+  width: 540px;
+}
+
+.siteLinks_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.linkHeader {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.link {
+  font: var(--font-xs);
+  color: var(--primary-color);
+  transition: all 0.3s;
+}
+.link:hover {
+  opacity: 0.7;
+}
+
+.link_ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.socialIcon {
+  color: var(--primary-color);
+  opacity: 0.9;
+}
+
+.logoImg {
+  width: 52px;
+  height: 52px;
+}
+
+.slogan {
+  font: var(--font-m);
+  color: var(--light-transparent);
+}
+
+.locationTrust {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.flagLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flagLogo_img {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #c7ced7;
+  padding: 2px;
+  border-radius: 100%;
+}
+
+.engLogo_title {
+  font-size: 12px;
+  color: var(--light-transparent);
+}
+
+.googlePlay_img {
+  width: 120px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: var(--bg-color);
+  font-size: 12px;
+  color: var(--light-transparent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}/*# sourceMappingURL=Footer.module.css.map */

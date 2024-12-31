@@ -1,0 +1,102 @@
+.header {
+  background-color: var(--light-bg);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: var(--container-body);
+  padding: 0 36px;
+}
+
+.content {
+  height: var(--content-header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoTitle {
+  font-size: var(--font-size-xl);
+  color: var(--primary-color);
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.Icon * {
+  color: var(--primary-color);
+}
+
+.wishItems::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.account_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.headerIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  width: 28px;
+  height: 28px;
+  position: relative;
+}
+
+@media (min-width: 1250px) {
+  .hiddenIcon {
+    display: none;
+  }
+}
+
+.iconTitle {
+  color: var(--primary-color);
+  font-size: 14px;
+}
+
+.routerNav {
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--container-content);
+  margin: 0 auto;
+}
+
+.navlinkBlock {
+  position: relative;
+  height: 50px;
+}
+
+.routeLink {
+  font-size: var(--font-size-s);
+  color: var(--light-transparent);
+  font-weight: 600;
+  height: 100%;
+  transition: color 0.2s ease-in-out;
+}
+.routeLink:hover, .routeLink.routeLink_active {
+  color: var(--primary-color);
+}
+.routeLink:hover:after, .routeLink.routeLink_active:after {
+  content: "";
+  border-bottom: 3px solid var(--primary-color);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=Header.module.css.map */

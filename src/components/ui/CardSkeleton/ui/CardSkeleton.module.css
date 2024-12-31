@@ -1,0 +1,12 @@
+.cardSkeleton {
+  width: 270px;
+  height: 530px;
+  background-color: #fff;
+}
+
+.description {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}/*# sourceMappingURL=CardSkeleton.module.css.map */

@@ -1,0 +1,70 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.Card:hover {
+  transform: scale(1.02);
+}
+
+.wishlistIcon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  stroke: #1c1d25;
+  fill: transparent;
+  z-index: 50;
+}
+.wishlistIcon:hover {
+  fill: #1c1d25;
+}
+
+.wishIconActive {
+  fill: #1c1d25;
+}
+
+.img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.header {
+  color: var(--light-transparent);
+}
+
+.brand {
+  font: var(--font-m);
+  font-weight: 500;
+}
+
+.name {
+  color: var(--light-transparent);
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.price {
+  color: var(--price-red);
+  font: var(--font-m);
+  margin: 8px 0 12px 0;
+}
+
+.card_btn_wrap {
+  text-align: center;
+}
+
+.card_btn {
+  width: 100%;
+}/*# sourceMappingURL=Card.module.css.map */
